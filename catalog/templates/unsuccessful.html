@@ -1,0 +1,82 @@
+{% load static %}
+
+{% block styles %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Live life as if Everyday is Hennyday.">
+<meta name="keywords" content="Hennyday Anyday, Hennyday, Anyday, Hennyday merch, Hennyday clothes">
+<meta name="author" content="Hennyday Anyday">
+<meta property="og:description" content="Live life as if everyday is hennyday.">
+<meta property="og:title" content="Hennyday Anyday">
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'thankyou_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsuccessful - Hennyday Anyday</title>
+
+    <!-- JQUERY SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo-icon.png' %}">
+</head>
+<body>
+
+    <!-- LOADING... -->
+    <div class="loading" id="loading">
+        <div class="loading-bg">
+            <img id="loading_bg" src ="{% static 'images/background-static.png' %}">
+        </div>
+        <div class="logo-container">
+             <img id="loading_img" src="{% static 'images/logo-main.png' %}" alt="">
+             <p>loading...</p>
+        </div>
+        <div class="pixel-texture">
+            <img src="{% static 'images/pixel-texture-1.png' %}" alt="">
+        </div>
+    </div>
+
+    
+
+    <!-------------------------------------->
+    <!-- BACKGROUND -->
+    <!-------------------------------------->
+    <div class="bg-video">
+        <video id="bg_video" src="https://fizionstudios.com/other_material/dark_blue_particles.mov" autoplay muted loop controls></video>
+        <!-- Video Playback Speed 0.4x -->
+        <script>
+            const video = document.getElementById('bg_video');
+    
+            // Set the playback rate to a slower speed (e.g., 0.5 for half speed)
+            video.playbackRate = 0.5; // Adjust this value as needed
+        </script>
+        <div class="blur"></div>
+    </div>
+
+
+    <!-------------------------------------->
+    <!-- MAIN LOGO -->
+    <!-------------------------------------->
+    <div class="main-content">
+        <h2>There was a <span style="color: red;">*problem*!</span></h2>
+        <button>
+            <a href="/home">Back To Site</a>
+        </button>
+        <br>
+        <button>
+            <a href="mailto:">Report</a>
+        </button>
+    </div>
+
+    <!-------------------------------------->
+    <!-- SCRIPTS -->
+    <!-------------------------------------->
+    <!-- main script -->
+    <script src="{% static 'src/thankyou_script.js' %}"></script>
+</body>
+</html>
+{% endblock %}

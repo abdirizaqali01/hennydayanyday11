@@ -1,0 +1,128 @@
+{% load static %}
+
+{% block styles %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Live life as if Everyday is Hennyday.">
+<meta name="keywords" content="Hennyday Anyday, Hennyday, Anyday, Hennyday merch, Hennyday clothes">
+<meta name="author" content="Hennyday Anyday">
+<meta property="og:description" content="Live life as if everyday is hennyday.">
+<meta property="og:title" content="Hennyday Anyday">
+<link rel="stylesheet" type="text/css" href="{% static 'landingPage.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mobileLanding.css' %}">
+{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hennyday Anyday</title>
+
+    <!-- JQUERY SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo-icon.png' %}">
+</head>
+<body>
+    
+    <!-------------------------------------->
+    <!-- BACKGROUND -->
+    <!-------------------------------------->
+    <div class="bg-video">
+        <video id="bg_video" src="https://fizionstudios.com/other_material/dark_blue_particles.mov" autoplay muted loop controls></video>
+        <!-- Video Playback Speed 0.4x -->
+        <script>
+            const video = document.getElementById('bg_video');
+    
+            // Set the playback rate to a slower speed (e.g., 0.5 for half speed)
+            video.playbackRate = 0.5; // Adjust this value as needed
+        </script>
+        <div class="blur"></div>
+    </div>
+
+
+    <!-------------------------------------->
+    <!-- MAIN LOGO -->
+    <!-------------------------------------->
+    <div class="logo" id="logo">
+        <a href="/home"><img class="logo-img" src="{% static "images/logo-main.png" %}" alt=""></a>
+    </div>
+
+
+    <!-------------------------------------->
+    <!-- CURVED LINE -->
+    <!-------------------------------------->
+    <div class="line">
+        <img src=" {% static "images/Line2.png" %}" src= alt="">
+    </div>
+
+
+    <!-------------------------------------->
+    <!-- NAVIGATION BUTTONS -->
+    <!-------------------------------------->
+    <div class="nav-container">
+        <div class="about-btn main-button">
+            <button id="aboutBtn">
+                <a class="highlighted-btn" id="aboutLink" href="#">About</a>
+            </button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="103" height="18" viewBox="0 0 103 18" fill="none">
+                <path d="M0 0H103L101 18H51.5H42.4113C40.1399 18 37.8715 17.8388 35.623 17.5176L33.7423 17.2489C31.2913 16.8988 28.977 15.9049 27.0354 14.3687L17.7671 7.0355C13.0143 3.27503 7.31768 0.896043 1.30205 0.159434L0 0Z" fill="#616CA1"/>
+            </svg>
+        </div>
+
+        <div class="store-btn main-button">
+            <button>
+                <a href="/shop">Store</a>
+            </button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="103" height="18" viewBox="0 0 103 18" fill="none">
+                <path d="M0 0H103L101 18H51.5H42.4113C40.1399 18 37.8715 17.8388 35.623 17.5176L33.7423 17.2489C31.2913 16.8988 28.977 15.9049 27.0354 14.3687L17.7671 7.0355C13.0143 3.27503 7.31768 0.896043 1.30205 0.159434L0 0Z" fill="#616CA1"/>
+            </svg>
+        </div>
+
+        <div class="gallery-btn main-button">
+            <button id="galleryBtn">
+                <a id="galleryLink" href="#">Gallery</a>
+            </button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="103" height="18" viewBox="0 0 103 18" fill="none">
+                <path d="M0 0H103V18H51.5H42.4113C40.1399 18 37.8715 17.8388 35.623 17.5176L33.7423 17.2489C31.2913 16.8988 28.977 15.9049 27.0354 14.3687L17.7671 7.0355C13.0143 3.27503 7.31768 0.896043 1.30205 0.159434L0 0Z" fill="#616CA1" fill-opacity="1"/>
+            </svg>
+        </div>
+
+        <div class="magazine-btn main-button">
+            <button id="magazineBtn">
+                <a id="magazineLink" href="#">Magazine</a>
+            </button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="103" height="18" viewBox="0 0 103 18" fill="none">
+                <path d="M0 0H103V18H51.5H42.4113C40.1399 18 37.8715 17.8388 35.623 17.5176L33.7423 17.2489C31.2913 16.8988 28.977 15.9049 27.0354 14.3687L17.7671 7.0355C13.0143 3.27503 7.31768 0.896043 1.30205 0.159434L0 0Z" fill="#616CA1" fill-opacity="1"/>
+            </svg>
+        </div>
+    </div>
+
+
+    <!-------------------------------------->
+    <!-- MAIN CONTENT -->
+    <!-------------------------------------->
+    <div class="about default-page" id="about">
+        <h3>Live Life As If Everyday Is Hennyday</h3>
+    </div>
+
+    <div class="gallery default-page hidden-section" id="gallery">
+        <p>Coming soon</p>
+    </div>
+
+    <div class="magazine default-page hidden-section" id="magazine">
+        <p>Under Construction</p>
+    </div>
+
+
+    <!-------------------------------------->
+    <!-- SCRIPTS -->
+    <!-------------------------------------->
+    <!-- main script -->
+    <script src= "{% static "src/script.js" %}"></script>
+</body>
+</html>
+{% endblock %}
+
